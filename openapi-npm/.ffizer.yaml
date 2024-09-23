@@ -7,3 +7,8 @@ variables:
     ask: What is the URL of the API spec?
 
 use_template_dir: true
+
+scripts:
+  - cmd: |
+      mv openapi/spec.yaml openapi/{{file_name api_spec_url}}
+      mv test/test.test.ts test/{{shorthand_name}}.test.ts
