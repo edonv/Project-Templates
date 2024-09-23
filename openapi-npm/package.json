@@ -1,0 +1,33 @@
+{
+  "name": "telzio-ts",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "",
+  "repository": "github:edonv/telzio-ts",
+  "author": "edonv",
+  "sponsor": {
+    "url": "https://github.com/sponsors/edonv"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "test": "tsc && node dist/test/telzio.test.js",
+    "api-gen": "openapi-typescript",
+    "gen-build": "npm run api-gen && npm run build",
+    "publish": "rm -r ./dist ; npm run gen-build && npm publish"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/README.md",
+    "/LICENSE.md",
+    "/dist/"
+  ],
+  "dependencies": {
+    "openapi-fetch": "^0.9.8"
+  },
+  "devDependencies": {
+    "openapi-typescript": "^7.4.0",
+    "typescript": "^5.5.4"
+  }
+}
