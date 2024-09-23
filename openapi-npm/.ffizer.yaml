@@ -5,3 +5,5 @@ variables:
     ask: What is the abbreviated name? (i.e. 'Telzio-TS' -> 'telzio')
   - name: api_spec_url
     ask: What is the URL of the API spec?
+
+use_template_dir: true
