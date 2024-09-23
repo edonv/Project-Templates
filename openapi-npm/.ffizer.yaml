@@ -1,0 +1,7 @@
+variables:
+  - name: package_name
+    ask: What is capitalized NPM package name? (i.e. 'Telzio-TS')
+  - name: shorthand_name
+    ask: What is the abbreviated name? (i.e. 'Telzio-TS' -> 'telzio')
+  - name: api_spec_url
+    ask: What is the URL of the API spec?

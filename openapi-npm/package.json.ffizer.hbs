@@ -1,17 +1,17 @@
 {
-  "name": "telzio-ts",
+  "name": "{{to_kebab_case package_name}}",
   "version": "0.0.0",
   "type": "module",
   "license": "MIT",
   "description": "",
-  "repository": "github:edonv/telzio-ts",
+  "repository": "github:edonv/{{to_kebab_case package_name}}",
   "author": "edonv",
   "sponsor": {
     "url": "https://github.com/sponsors/edonv"
   },
   "scripts": {
     "build": "tsc --build tsconfig.build.json",
-    "test": "tsc && node dist/test/telzio.test.js",
+    "test": "tsc && node dist/test/{{to_lower_case shorthand_name}}.test.js",
     "api-gen": "openapi-typescript",
     "gen-build": "npm run api-gen && npm run build",
     "publish": "rm -r ./dist ; npm run gen-build && npm publish"
